@@ -35,7 +35,7 @@ module.exports = function(options) {
                     return [bundleOutput.itemName, bundleOutput.modules]
                 })),
                 bundleConfigCode = '\nrequire.config('
-                    + JSON.stringify({ bundles: bundleConfig, config: options.config }, true, 2)
+                    + JSON.stringify({ bundles: bundleConfig, config: options.config, map: options.map }, true, 2)
                     + ');\n';
             return new File({
                 path: primaryOutput.file.path,
